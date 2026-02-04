@@ -35,4 +35,13 @@ public class LionTest {
        List<String> actualResult = lion.getFood();
        assertEquals("Некорректный результат", expectedResult, actualResult);
     }
+
+    @Test
+    public void lionNoSexExceptionTest() throws Exception { // тест проверяет, что при некорректном указании пола животного сработает исключение
+
+        Exception exception = assertThrows(Exception.class, () -> {
+            Lion lion = new Lion("Непонятно", feline);
+        });
+        assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
+    }
 }
