@@ -37,7 +37,7 @@ public class LionTest {
     }
 
     @Test
-    public void lionNoSexExceptionTest() throws Exception { // тест проверяет, что при некорректном указании пола животного сработает исключение
+    public void lionNoSexExceptionTest() { // тест проверяет, что при некорректном указании пола животного сработает исключение
 
         Exception exception = assertThrows(Exception.class, () -> {
             Lion lion = new Lion("Непонятно", feline);
